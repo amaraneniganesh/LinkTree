@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import config from "../config"; // Import the config file
 import "./AddLink.css";
 
 const AddLink = ({ loggedInUser }) => {
@@ -20,7 +21,7 @@ const AddLink = ({ loggedInUser }) => {
     e.preventDefault();
     try {
       const response = await fetch(
-        `http://localhost:8080/api/links?username=${loggedInUser}`,
+        `${config.backendUrl}/api/links?username=${loggedInUser}`, // Use backendUrl from config
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

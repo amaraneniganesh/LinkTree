@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Dashboard.css";
+import config from "../config";
 
 const Dashboard = ({ loggedInUser, handleLogout }) => {
   const [links, setLinks] = useState([]);
@@ -11,7 +12,7 @@ const Dashboard = ({ loggedInUser, handleLogout }) => {
     const fetchLinks = async () => {
       try {
         const response = await fetch(
-          `http://localhost:8080/api/links?username=${loggedInUser}`
+          `${config.backendUrl}/api/links?username=${loggedInUser}`
         );
         if (response.ok) {
           const data = await response.json();
@@ -34,7 +35,7 @@ const Dashboard = ({ loggedInUser, handleLogout }) => {
 
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`http://localhost:8080/api/links/${id}`, {
+      const response = await fetch(`${config.backendUrl}/api/links/${id}`, {
         method: "DELETE",
       });
       if (response.ok) {

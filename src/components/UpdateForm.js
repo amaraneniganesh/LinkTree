@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import './UpdateForm.css';
+import config from '../config';
 
 const UpdateForm = () => {
   const { id } = useParams(); // Get the link ID from the URL
@@ -17,7 +18,7 @@ const UpdateForm = () => {
   useEffect(() => {
     const fetchLinkDetails = async () => {
       try {
-        const response = await fetch(`http://localhost:8080/api/links/${id}`); // Adjust the endpoint as needed
+        const response = await fetch(`${config.backendUrl}/api/links/${id}`); // Adjust the endpoint as needed
         if (response.ok) {
           const data = await response.json();
           setFormData({
@@ -51,7 +52,7 @@ const UpdateForm = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch(`http://localhost:8080/api/links/${id}`, {
+      const response = await fetch(`${config.backendUrl}/api/links/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

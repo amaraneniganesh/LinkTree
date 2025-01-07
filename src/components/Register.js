@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useNavigate } from 'react-router-dom';
 import './Register.css';
+import config from '../config'; // Import the config file
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -9,7 +10,7 @@ const Register = () => {
     password: '',
   });
   const [message, setMessage] = useState('');
-  const navigate = useNavigate(); // Initialize useNavigate
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -19,7 +20,7 @@ const Register = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:8080/api/users/register', {
+      const response = await fetch(`${config.backendUrl}/api/users/register`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
@@ -27,8 +28,8 @@ const Register = () => {
       if (response.ok) {
         setMessage('User registered successfully');
         setTimeout(() => {
-          navigate('/'); // Redirect to the homepage after successful registration
-        }, 1000); // Add a slight delay for the message to display
+          navigate('/');
+        }, 1000);
       } else {
         setMessage('Username or Gmail username already exists');
       }

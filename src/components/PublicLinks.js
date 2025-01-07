@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import './PublicLinks.css';
+import config from '../config';
 
 const PublicLinks = () => {
   const { username } = useParams();
@@ -9,7 +10,7 @@ const PublicLinks = () => {
   useEffect(() => {
     const fetchLinks = async () => {
       try {
-        const response = await fetch(`http://localhost:8080/api/links/public/${username}`);
+        const response = await fetch(`${config.backendUrl}/api/links/public/${username}`);
         if (response.ok) {
           const data = await response.json();
           setLinks(data);
