@@ -1,0 +1,611 @@
+.dashboard-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.dashboard-header h2 {
+  margin: 0;
+  color: #4caf50;
+}
+
+.dashboard-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.logout-button,
+.add-link-button,
+.share-button,
+.update-button,
+.delete-button {
+  padding: 8px 16px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button {
+  background-color: #ff6b6b;
+  color: #fff;
+}
+
+.logout-button:hover {
+  background-color: #ff4c4c;
+}
+
+.add-link-button {
+  background-color: #4caf50;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.add-link-button:hover {
+  background-color: #45a049;
+}
+
+.share-button {
+  background-color: #2196f3;
+  color: #fff;
+}
+
+.share-button:hover {
+  background-color: #1e88e5;
+}
+
+.links-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 15px;
+}
+
+.link-card {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.link-card h3 {
+  margin: 0 0 10px;
+  color: #4caf50;
+}
+
+.link-card a {
+  color: #2196f3;
+  text-decoration: none;
+}
+
+.link-card a:hover {
+  text-decoration: underline;
+}
+
+.link-card p {
+  font-size: 12px;
+  color: #777;
+  margin: 10px 0;
+}
+
+.link-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.update-button {
+  background-color: #ff9800;
+  color: #fff;
+}
+
+.update-button:hover {
+  background-color: #fb8c00;
+}
+
+.delete-button {
+  background-color: #f44336;
+  color: #fff;
+}
+
+.delete-button:hover {
+  background-color: #e53935;
+}
+
+
+.update-link-button {
+  width: 50px;
+  height: 50px;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.update-link-button svg {
+  stroke: #71717a; /* Similar to stroke-zinc-400 */
+  fill: none;
+  transition: fill 0.3s ease, stroke 0.3s ease;
+}
+
+.update-link-button:hover svg {
+  fill: #27272a; /* Similar to fill-zinc-800 */
+  stroke: #52525b; /* Darker stroke on hover */
+}
+
+.update-link-button:active svg {
+  stroke: #e4e4e7; /* Similar to stroke-zinc-200 */
+  fill: #52525b; /* Similar to fill-zinc-600 */
+  transition: none;
+}
+
+.dashboard-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.dashboard-header h2 {
+  margin: 0;
+  color: #4caf50;
+}
+
+.dashboard-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.logout-button,
+.share-button,
+.update-link-button,
+.delete-button {
+  padding: 8px 16px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button {
+  background-color: #ff6b6b;
+  color: #fff;
+}
+
+.logout-button:hover {
+  background-color: #ff4c4c;
+}
+
+.share-button {
+  background-color: #2196f3;
+  color: #fff;
+}
+
+.share-button:hover {
+  background-color: #1e88e5;
+}
+
+.links-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 15px;
+}
+
+.link-card {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.link-card h3 {
+  margin: 0 0 10px;
+  color: #4caf50;
+}
+
+.link-card a {
+  color: #2196f3;
+  text-decoration: none;
+}
+
+.link-card a:hover {
+  text-decoration: underline;
+}
+
+.link-card p {
+  font-size: 12px;
+  color: #777;
+  margin: 10px 0;
+}
+
+.link-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.update-link-button {
+  background-color: #ff9800;
+  color: #fff;
+}
+
+.update-link-button:hover {
+  background-color: #fb8c00;
+}
+
+.delete-button {
+  background-color: #f44336;
+  color: #fff;
+}
+
+.delete-button:hover {
+  background-color: #e53935;
+}
+
+.add-link-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.add-link-button-ls {
+  width: 50px;
+  height: 50px;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.add-link-button-ls svg {
+  stroke: #71717a;
+  fill: none;
+  transition: fill 0.3s ease, stroke 0.3s ease;
+}
+
+.add-link-button-ls:hover svg {
+  fill: #d1d5db;
+  stroke: #52525b;
+}
+
+.add-link-button-ls:active svg {
+  stroke: #e4e4e7;
+  fill: #a1a1aa;
+  transition: none;
+}
+
+.ass-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(20, 20, 20);
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+  cursor: pointer;
+  transition-duration: .3s;
+  overflow: hidden;
+  position: relative;
+}
+
+.ass-svgIcon {
+  width: 12px;
+  transition-duration: .3s;
+}
+
+.ass-svgIcon path {
+  fill: white;
+}
+
+.ass-button:hover {
+  width: 140px;
+  border-radius: 50px;
+  transition-duration: .3s;
+  background-color: rgb(255, 69, 69);
+  align-items: center;
+}
+
+.ass-button:hover .ass-svgIcon {
+  width: 50px;
+  transition-duration: .3s;
+  transform: translateY(60%);
+}
+
+.ass-button::before {
+  position: absolute;
+  top: -20px;
+  content: "Delete";
+  color: white;
+  transition-duration: .3s;
+  font-size: 2px;
+}
+
+.ass-button:hover::before {
+  font-size: 13px;
+  opacity: 1;
+  transform: translateY(30px);
+  transition-duration: .3s;
+}
+
+
+
+
+
+
+
+
+.ass-edit-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(20, 20, 20);
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none !important;
+}
+
+.ass-edit-svgIcon {
+  width: 17px;
+  transition-duration: 0.3s;
+}
+
+.ass-edit-svgIcon path {
+  fill: white;
+}
+
+.ass-edit-button:hover {
+  width: 120px;
+  border-radius: 50px;
+  transition-duration: 0.3s;
+  background-color: rgb(255, 69, 69);
+  align-items: center;
+}
+
+.ass-edit-button:hover .ass-edit-svgIcon {
+  width: 20px;
+  transition-duration: 0.3s;
+  transform: translateY(60%);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.ass-edit-button::before {
+  display: none;
+  content: "Edit";
+  color: white;
+  transition-duration: 0.3s;
+  font-size: 2px;
+}
+
+.ass-edit-button:hover::before {
+  display: block;
+  padding-right: 10px;
+  font-size: 13px;
+  opacity: 1;
+  transform: translateY(0px);
+  transition-duration: 0.3s;
+}
+
+/* =============================================================================== */
+.Btn-ads {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition-duration: 0.3s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+  background-color: white;
+  padding: 5px; /* Add some padding for better spacing */
+}
+
+/* Plus sign (icon container) */
+.sign-ads {
+  width: 40px; /* Set a fixed width for better spacing */
+  height: 100%; /* Ensure it stretches to full height */
+  transition-duration: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Icon size */
+.sign-ads svg {
+  width: 20px; /* Adjust icon size */
+  height: 20px;
+}
+
+.sign-ads svg path {
+  fill: black;
+}
+
+/* Text (Logout) */
+.text-ads {
+  margin-left: 10px; /* Add margin between icon and text */
+  position: absolute;
+  right: 0%;
+  width: 0%;
+  opacity: 0;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 600;
+  transition-duration: 0.3s;
+}
+
+/* Hover effect on button width */
+.Btn-ads:hover {
+  background-color: black;
+  width: 150px; /* Increase width for spacing */
+  border-radius: 40px;
+  transition-duration: 0.3s;
+}
+
+.Btn-ads:hover .sign-ads {
+  width: 30%;
+  transition-duration: 0.3s;
+  padding-left: 10px;
+}
+
+.Btn-ads:hover .sign-ads svg path {
+  fill: white;
+}
+
+/* Hover effect for text */
+.Btn-ads:hover .text-ads {
+  opacity: 1;
+  width: auto; /* Allow text to occupy available space */
+  transition-duration: 0.3s;
+  padding-right: 35px;
+  margin-left: 40px; /* Properly position text */
+}
+
+/* Button click effect */
+.Btn-ads:active {
+  transform: translate(2px, 2px);
+}
+
+/* ============================================================================================ */
+
+/* Container Styles */
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+  font-family: "Arial", sans-serif;
+  overflow: visible;
+}
+
+/* Okra Button Styles */
+.okra {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: white;
+  padding: 14px 28px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition:
+    background 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+    transform 0.3s ease,
+    box-shadow 0.4s ease;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.okra::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    135deg,
+    rgba(110, 142, 251, 0.4),
+    rgba(167, 119, 227, 0.4)
+  );
+  filter: blur(15px);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: -1;
+}
+
+.okra::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  transform: scale(0);
+  transition: transform 0.6s ease-out;
+  z-index: -1;
+}
+
+.okra:hover::before {
+  opacity: 1;
+}
+
+.okra:hover::after {
+  transform: scale(1);
+}
+
+.okra:hover {
+  background: linear-gradient(135deg, #a777e3, #6e8efb);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px) scale(1.03);
+}
+
+.okra:active {
+  transform: translateY(-2px) scale(0.98);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.text {
+  font-size: 18px;
+  font-weight: 600;
+  margin-right: 12px;
+  white-space: nowrap;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: letter-spacing 0.3s ease;
+}
+
+.okra:hover .text {
+  letter-spacing: 1px;
+}
+
+.share-icon {
+  fill: white;
+  transition:
+    transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+    fill 0.3s ease;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+}
+
+.okra:hover .share-icon {
+  transform: rotate(180deg) scale(1.1);
+  fill: #ffffff;
+}
